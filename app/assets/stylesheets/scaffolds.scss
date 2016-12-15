@@ -1,7 +1,7 @@
 body {
-  background-color: #234B62;
+  background-color: #D7CBC8;
   color: white;
-  font-family: helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
@@ -27,8 +27,8 @@ th {
 
 td {
   padding-bottom: 7px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 div {
@@ -82,20 +82,23 @@ label {
 
 h1{
   text-align: center;
-  color: orange;
+  color: #AB3E26;
 }
 
 table{
-  margin: auto;
+  margin-right: auto;
   margin-top: 100px;
-  border: white solid;
-  border-radius: 5%;
   padding: 50px;
+}
+
+.tableau{
+  width: 50%;
 }
 
 .create{
   margin: auto;
   border-radius: 20%;
+
 }
 
 .login{
@@ -106,8 +109,8 @@ a{
   display: block;
   border: 2px solid;
   border-color: white;
-  border-radius: 20%;
-  background-color: orange;
+  border-radius: 80px;
+  background-color: #AB3E26;
   color: white;
   width: 80px;
   text-align: center;

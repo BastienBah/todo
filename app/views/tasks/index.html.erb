@@ -1,8 +1,9 @@
 <body>
 <p id="notice"><%= notice %></p>
 
-  <h1>Tasks</h1>
+  <h1>What you have TODO !</h1>
 
+<div class="tableau">
 <table>
   <thead>
     <tr>
@@ -19,9 +20,8 @@
         <td><%= task.name %></td>
         <td><%= task.commentaire %></td>
         <td><%= task.for %></td>
-        <div class="bouton"><td><%= link_to 'Show', task %></td></div>
         <div class="bouton"><td><%= link_to 'Edit', edit_task_path(task) %></td></div>
-        <div class="bouton"><td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td></div>
+        <div class="bouton"><td><%= link_to 'Destroy', task, method: :delete %></td></div>
       </tr>
     <% end %>
   </tbody>
@@ -30,5 +30,6 @@
 <br>
 <div class="create">
 <%= link_to 'New Task', new_task_path %>
+</div>
 </div>
 </body>
