@@ -2,6 +2,10 @@
 <p id="notice"><%= notice %></p>
 
   <h1>What you have TODO !</h1>
+  <br><br><br>
+<div class="sous-titre">
+    <h3>Cette application est une todo-list consacré à l'ensemble de la promo, le but est de s'en servir comme un agenda où tout le monde peut écrire des tâches à réaliser qui sont communes à tous !</h3>
+</div>
 
 <div class="tableau">
 <table>
@@ -19,9 +23,16 @@
       <tr>
         <td><%= task.name %></td>
         <td><%= task.commentaire %></td>
-        <td><%= task.for %></td>
-        <div class="bouton"><td><%= link_to 'Edit', edit_task_path(task) %></td></div>
-        <div class="bouton"><td><%= link_to 'Destroy', task, method: :delete %></td></div>
+        <td>
+          <% time = ((task.for.to_time - Time.now).to_i) %>
+          				<% if time >= 0 %>
+          					<p><%= (time/3600) / 24 %>j <%= (time/3600) % 24%>h <%= (time/60) % 60 %>m</p>
+          				<%else%>
+          					<p> DONE </p>
+          				<% end %>
+        </td>
+        <div class="edit"><td><%= link_to 'Edit', edit_task_path(task) %></td></div>
+        <div class="destroy"><td><%= link_to 'Destroy', task, method: :delete %></td></div>
       </tr>
     <% end %>
   </tbody>

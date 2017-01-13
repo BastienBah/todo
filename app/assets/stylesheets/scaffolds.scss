@@ -1,14 +1,13 @@
 body {
-  background-color: #D7CBC8;
+  background-color: #151826;
   color: white;
   font-family: 'Raleway', sans-serif;;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 18px;
   margin: 33px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
   margin: 33px;
@@ -22,14 +21,24 @@ pre {
 
 th {
   padding: 30px;
-
+  width: 500px;
 }
+
 
 td {
-  padding-bottom: 7px;
+  padding-bottom: 25px;
+  padding-top: 25px;
   padding-left: 30px;
   padding-right: 30px;
+  border-top: solid;
 }
+
+tr :nth-child(4),
+tr :nth-child(5) {
+  border-top: none;
+  border-bottom: none;
+}
+
 
 div {
   &.field, &.actions {
@@ -66,10 +75,6 @@ div {
     color: #fff;
   }
 
-  h1{
-    font-family: Helvetica, serif;
-  }
-
   ul li {
     font-size: 12px;
     list-style: square;
@@ -78,23 +83,25 @@ div {
 
 label {
   display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 h1{
   text-align: center;
-  color: #A45837;
+  color: #FF8A66;
+  font-size: 40px;
 }
 
 table{
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 60px;
   padding: 50px;
-  border: solid;
   border-radius: 30px;
 }
 
 .tableau{
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
@@ -113,7 +120,7 @@ a{
   border: 2px solid;
   border-color: white;
   border-radius: 80px;
-  background-color: #A45837;
+  background-color: #FF8A66;
   color: white;
   width: 80px;
   text-align: center;
@@ -126,6 +133,47 @@ a, a:hover, a:visited{
 }
 
 a:hover{
+  background-color: white;
+  color: #234B62;
+}
+
+.sous-titre {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.field {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+textarea {
+  width: 20%;
+  height: 75px;
+  border-radius: 10px;
+}
+
+input{
+  width: 20%;
+  border-radius: 10px;
+  height: 20px;
+}
+
+.actions input{
+  margin-top: 40px;
+  border: 2px solid;
+  border-color: white;
+  border-radius: 80px;
+  background-color: #FF8A66;
+  color: white;
+  width: 80px;
+  text-align: center;
+}
+
+.actions input:hover{
   background-color: white;
   color: #234B62;
 }
